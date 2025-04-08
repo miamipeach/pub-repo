@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import { Global } from '@emotion/react';
+import globalStyle from '@publishing/ui/foundation/global.style';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Global styles={globalStyle} />
       <body className={inter.className}>{children}</body>
     </html>
   );

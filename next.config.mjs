@@ -5,8 +5,9 @@ const withVanillaExtract = createVanillaExtractPlugin({
 });
 
 /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//     transpilePackages: ['@company/design-system']
-// };
+const nextConfig = {
+  presets: ['next/babel'],
+  plugins: ['@emotion'],
+};
 
 export default withVanillaExtract(nextConfig);
