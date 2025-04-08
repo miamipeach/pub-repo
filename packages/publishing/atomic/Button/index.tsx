@@ -1,5 +1,6 @@
 import React from 'react';
 import { buttonProps } from './interface';
+import { ButtonStyle } from './Button.style';
 export const ButtonTest = ({ children }: buttonProps) => {
-  return <div css={ButtonStyle}>Emotion 스타일 적용된 박스</div>;
+  return <div></div>;
 };
