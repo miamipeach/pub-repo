@@ -3,7 +3,7 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import GlobalStyle from './GlobalStyle';
-import theme from './theme';
+import theme from './theme/theme';
 
 const EmotionProvider = ({
   children,

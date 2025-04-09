@@ -1,7 +1,9 @@
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import theme from '../../foundation/theme/theme';
 
-export const ButtonStyle = css`
-  padding: 16px;
-  background: #f0f0f0;
-  color: #333;
+const Button = styled.button`
+  background: ${theme.background.active.primary};
+  color: white;
+  padding: 10px 1rem;
+  border: none;
 `;
