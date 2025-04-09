@@ -1,20 +1,16 @@
 import React from 'react';
-import { Global } from '@emotion/react';
-import globalStyle from '../../foundation/global.style';
+import EmotionProvider from '../../foundation/EmotionProvider';
 
-const Index = ({
+const DefaultLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
   return (
     <>
-      <html lang="en">
-        <Global styles={globalStyle} />
-        <body>{children}</body>
-      </html>
+      <EmotionProvider>{children}</EmotionProvider>
     </>
   );
 };
 
-export default Index;
+export default DefaultLayout;

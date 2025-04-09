@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Global } from '@emotion/react';
-import globalStyle from '@publishing/ui/foundation/global.style';
-
-const inter = Inter({ subsets: ['latin'] });
+import React from 'react';
+import DefaultLayout from '@publishing/ui/layouts/default';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,8 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Global styles={globalStyle} />
-      <body className={inter.className}>{children}</body>
+      <body>
+        <DefaultLayout>{children}</DefaultLayout>
+      </body>
     </html>
   );
 }
