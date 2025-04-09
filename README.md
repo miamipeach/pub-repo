@@ -1,3 +1,9 @@
+## npm install 시 무한로딩에 걸린다면
+```bash
+npm config set strict-ssl false
+npm config set registry https://registry.npmjs.org/
+```
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
