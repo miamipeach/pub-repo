@@ -44,4 +44,18 @@ export const color = {
     '1100': '#252B37',
     '1200': '#010616',
   },
+  white: {
+    '50': '#FFFFFF0D',
+    '70': '#FFFFFF12',
+    '100': '#FFFFFF1A',
+    '200': '#FFFFFF33',
+    '300': '#FFFFFF4D',
+    '400': '#FFFFFF66',
+    '500': '#FFFFFF80',
+    '600': '#FFFFFF99',
+    '700': '#FFFFFFB3',
+    '800': '#FFFFFFCC',
+    '850': '#FFFFFFD9',
+    '1000': '#FFFFFF',
+  },
 };

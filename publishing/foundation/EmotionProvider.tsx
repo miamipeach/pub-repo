@@ -3,7 +3,7 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import GlobalStyle from './GlobalStyle';
-import theme from './theme/theme';
+import T from './theme/globalTheme';
 
 const EmotionProvider = ({
   children,
@@ -11,7 +11,7 @@ const EmotionProvider = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={T}>
       <GlobalStyle />
       {children}
     </ThemeProvider>

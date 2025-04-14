@@ -1,8 +1,8 @@
 import { defaultTheme } from './default/defaultTheme';
 import { ThemeInterface } from './ThemeInterface';
 
-const theme: ThemeInterface = {
+const GlobalTheme: ThemeInterface = {
   ...defaultTheme,
 };
 
-export default theme;
+export default GlobalTheme;

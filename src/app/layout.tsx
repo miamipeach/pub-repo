@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import React from 'react';
-import DefaultLayout from '@publishing/ui/layouts/default';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <DefaultLayout>{children}</DefaultLayout>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
