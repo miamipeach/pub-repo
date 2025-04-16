@@ -1,19 +1,21 @@
 import React from 'react';
-import { ColorKeyType, ColorKeyType2, ThemeInterface } from '../../foundation/theme/ThemeInterface';
-import { radius } from '../../foundation/theme/default/radius';
+import { ThemeInterface } from '../../foundation/theme/ThemeInterface';
 
-export interface ButtonProps extends ButtonStyleProps {
+export interface ButtonProps extends ButtonStyleProps, ButtonEventProps {}
+
+export interface ButtonEventProps {
   children: React.ReactNode;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface ButtonStyleProps {
   size: ButtonSize;
   spacing: ButtonSpacing;
-  backgroundColor: ButtonBackgroundColor;
-  pressedBackgroundColor: ButtonBackgroundColor;
+  backgroundColor: string;
+  pressedBackgroundColor: string;
   radius: ButtonRadius;
-  colorSet: ButtonColor;
-  borderColor: ButtonColor | ButtonBackgroundColor;
+  colorSet: string;
+  borderColor: ButtonColor | string;
 }
 
 type ButtonSize = ThemeInterface['size'][keyof ThemeInterface['size']];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonProps } from './interface';
+import { ButtonEventProps, ButtonProps } from './interface';
 import ButtonStyle from './Button.style';
 import globalTheme from '../../foundation/theme/globalTheme';
 
@@ -28,7 +28,7 @@ export const Button = ({
   );
 };
 
-export const PrimaryButton = () => (
+export const PrimaryButton = ({ children }: ButtonEventProps) => (
   <Button
     size={globalTheme.size['700']}
     spacing={globalTheme.spacing['200']}
@@ -38,6 +38,6 @@ export const PrimaryButton = () => (
     colorSet={globalTheme.content.active.primaryInvert}
     borderColor={globalTheme.background.active.primary}
   >
-    label
+    {children}
   </Button>
 );

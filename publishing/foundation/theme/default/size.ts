@@ -1,4 +1,4 @@
-export const size = {
+const size = {
   '25': '0.125rem',
   '50': '0.25rem',
   '75': '0.375rem',
@@ -31,3 +31,5 @@ export const size = {
   '3000': '15rem',
   '4000': '20rem',
 };
+
+export default size;

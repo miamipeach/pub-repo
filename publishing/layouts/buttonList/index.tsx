@@ -1,11 +1,11 @@
 import React from 'react';
 import DefaultLayout from '../default';
-import { Button } from '../../atomic/Button';
+import { PrimaryButton } from '../../atomic/Button';
 
 const ButtonListLayout = () => {
   return (
     <DefaultLayout>
-      <Button>label</Button>
+      <PrimaryButton>label</PrimaryButton>
     </DefaultLayout>
   );
 };

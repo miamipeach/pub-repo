@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.13.5",
-    "@publishing/ui": "file:./packages/publishing",
+    "@publishing/ui": "file:./publishing",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

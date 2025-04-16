@@ -1,4 +1,4 @@
-export const radius = {
+const radius = {
   '25': '0.125rem',
   '50': '0.25rem',
   '75': '0.3846rem',
@@ -12,3 +12,5 @@ export const radius = {
   '400': '2rem',
   '12488': '999px',
 };
+
+export default radius;

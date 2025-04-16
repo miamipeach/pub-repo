@@ -1,4 +1,4 @@
-export const spacing = {
+const spacing = {
   '0': '0rem',
   '25': '0.125rem',
   '50': '0.25rem',
@@ -24,3 +24,5 @@ export const spacing = {
   '1700': '9.25rem',
   '1950': '9.75rem',
 };
+
+export default spacing;

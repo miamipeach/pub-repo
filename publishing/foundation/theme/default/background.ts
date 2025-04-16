@@ -1,7 +1,9 @@
-import GlobalTheme from '../globalTheme';
+import color from './color';
 
-export const background = {
+const background = {
   active: {
-    primary: GlobalTheme.color.indigo['1100'],
+    primary: color.indigo['1100'],
   },
 };
+
+export default background;

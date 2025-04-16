@@ -1,15 +1,17 @@
-import { color } from './color';
-import { background } from './background';
-import { size } from './size';
-import { spacing } from './spacing';
-import { radius } from './radius';
-import { content } from './content';
+import color from './color';
+import size from './size';
+import spacing from './spacing';
+import radius from './radius';
+import content from './content';
+import background from './background';
 
-export const defaultTheme = {
+const defaultTheme = {
   color,
-  background,
   size,
   spacing,
   radius,
   content,
+  background,
 };
+
+export default defaultTheme;

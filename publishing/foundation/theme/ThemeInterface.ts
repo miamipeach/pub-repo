@@ -1,6 +1,3 @@
-import { content } from './default/content';
-import globalTheme from './globalTheme';
-
 export interface ThemeInterface {
   background: {
     active: {

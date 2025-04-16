@@ -5,7 +5,7 @@ const ButtonStyle = styled.button<ButtonStyleProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   height: ${({ size }) => size};
   color: ${({ colorSet }) => colorSet};
-  padding: ${({ spacing }) => spacing} 0;
+  padding: ${({ spacing }) => `0 ${spacing}`};
   border-radius: ${({ radius }) => radius};
   &:active {
     background-color: ${({ pressedBackgroundColor }) => pressedBackgroundColor};

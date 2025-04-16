@@ -1,4 +1,4 @@
-export const color = {
+const color = {
   blue: {
     '50': '#D1ECFF',
     '100': '#B2DFFF',
@@ -59,3 +59,5 @@ export const color = {
     '1000': '#FFFFFF',
   },
 };
+
+export default color;
