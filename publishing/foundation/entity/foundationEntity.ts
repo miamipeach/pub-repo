@@ -1,3 +1,5 @@
+import { background } from '../interface/background';
+
 export const KDSFoundation = {
   fontSize138: '0.6875rem',
   fontSize150: '0.75rem',
@@ -119,7 +121,7 @@ export const KDSFoundation = {
   thickness400: '0.2125rem',
 };
 
-const KDSColorEntity = {
+export const KDSColorEntity = {
   testGradient: '#c29d9d',
   documentComplete: '#cfffd2',
   documentComponent: '#9747ff',
@@ -347,38 +349,7 @@ const KDSColorEntity = {
 };
 
 export const lightTheme = {
-  backgroundLoading: KDSColorEntity.white100,
-  backgroundMark: KDSColorEntity.red700,
-  backgroundPressed: KDSColorEntity.black50,
-  backgroundSurface: KDSColorEntity.white1000,
-  backgroundAccentPrimary: KDSColorEntity.indigo500,
-  backgroundAccentSecondary: KDSColorEntity.indigo100,
-  backgroundActivePrimary: KDSColorEntity.indigo1100,
-  backgroundActiveSecondary: KDSColorEntity.gray1100,
-  backgroundActiveTertiary: KDSColorEntity.indigo700,
-  backgroundDefaultPrimary: KDSColorEntity.gray200,
-  backgroundDefaultSecondary: KDSColorEntity.gray100,
-  backgroundDefaultTertiary: KDSColorEntity.gray50,
-  backgroundDisabledInvert: KDSColorEntity.white100,
-  backgroundDisabledPrimary: KDSColorEntity.gray200,
-  backgroundDisabledSecondary: KDSColorEntity.gray50,
-  backgroundErrorPrimary: KDSColorEntity.red700,
-  backgroundErrorSecondary: KDSColorEntity.red50,
-  backgroundInvertPrimary: KDSColorEntity.white100,
-  backgroundInvertSecondary: KDSColorEntity.white200,
-  backgroundInvestDown: KDSColorEntity.blue700,
-  backgroundInvestUp: KDSColorEntity.red700,
-  backgroundNeutralPrimary: KDSColorEntity.violet900,
-  backgroundNeutralSecondary: KDSColorEntity.violet50,
-  backgroundRiskHigh: KDSColorEntity.orange600,
-  backgroundRiskLow: KDSColorEntity.lime600,
-  backgroundRiskNormal: KDSColorEntity.yellow600,
-  backgroundRiskVeryHigh: KDSColorEntity.red700,
-  backgroundRiskVeryLow: KDSColorEntity.blue800,
-  backgroundSuccessPrimary: KDSColorEntity.celery700,
-  backgroundSuccessSecondary: KDSColorEntity.celery50,
-  backgroundWarningPrimary: KDSColorEntity.yellow200,
-  backgroundWarningSecondary: KDSColorEntity.yellow50,
+  ...background,
   borderDisabled: KDSColorEntity.gray400,
   borderError: KDSColorEntity.red700,
   borderFocused: KDSColorEntity.indigo600,

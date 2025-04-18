@@ -7,7 +7,7 @@ export const Button = ({
   children,
   size = GlobalTheme.size700,
   spacing = GlobalTheme.spacing200,
-  backgroundColor = GlobalTheme.contentActivePrimaryInvert,
+  backgroundColor = GlobalTheme.backgroundActivePrimary,
   fontColor = GlobalTheme.fontSize225,
   pressedBackgroundColor = GlobalTheme.backgroundActivePrimary,
   radius = GlobalTheme.radius150,

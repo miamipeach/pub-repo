@@ -1,6 +1,6 @@
-import defaultTheme from './defaultTheme';
+import ThemeList from './themeList';
 import { ThemeType } from './theme.type';
 
-const GlobalTheme: ThemeType = defaultTheme.lightTheme;
+const GlobalTheme: ThemeType = ThemeList.lightTheme;
 
 export default GlobalTheme;

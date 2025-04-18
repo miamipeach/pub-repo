@@ -1,14 +1,14 @@
 import React from 'react';
 import { Button } from './index';
 import GlobalTheme from '../../foundation/theme/globalTheme';
-import { ButtonEventProps } from './interface';
+import { ButtonEventProps, ButtonStyleProps } from './interface';
 
 const PrimaryButton = ({ children }: ButtonEventProps) => {
   return (
     <Button
       size={GlobalTheme.size700}
       spacing={GlobalTheme.spacing200}
-      backgroundColor={GlobalTheme.contentAccentPrimary}
+      backgroundColor={ButtonStyleProps.background.backgroundAccentPrimary}
       fontColor={GlobalTheme.fontSize225}
       pressedBackgroundColor={GlobalTheme.backgroundActivePrimary}
       radius={GlobalTheme.radius150}

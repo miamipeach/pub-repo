@@ -1,0 +1,28 @@
+import { KDSColorEntity } from '../../entity/foundationEntity';
+
+export const border = {
+  borderDisabled: KDSColorEntity.gray400,
+  borderError: KDSColorEntity.red700,
+  borderFocused: KDSColorEntity.indigo600,
+  borderHandle: KDSColorEntity.black50,
+  borderImage: KDSColorEntity.black50,
+  borderNeutral: KDSColorEntity.violet900,
+  borderReadonly: KDSColorEntity.gray800,
+  borderSuccess: KDSColorEntity.celery700,
+  borderAccentPrimary: KDSColorEntity.indigo600,
+  borderAccentSecondary: KDSColorEntity.indigo400,
+  borderActivePrimary: KDSColorEntity.indigo1000,
+  borderActiveSecondary: KDSColorEntity.gray1000,
+  borderActiveTertiary: KDSColorEntity.indigo800,
+  borderDefaultPrimary: KDSColorEntity.gray1100,
+  borderDefaultQuaternary: KDSColorEntity.gray300,
+  borderDefaultQuinary: KDSColorEntity.gray100,
+  borderDefaultSecondary: KDSColorEntity.gray900,
+  borderDefaultTertiary: KDSColorEntity.gray700,
+  borderDisabledInvert: KDSColorEntity.white200,
+  borderInvertPrimary: KDSColorEntity.white1000,
+  borderInvertSecondary: KDSColorEntity.white700,
+  borderInvertTertiary: KDSColorEntity.white200,
+  borderInvestDown: KDSColorEntity.blue700,
+  borderInvestUp: KDSColorEntity.red700,
+};

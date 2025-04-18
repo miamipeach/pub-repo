@@ -1,0 +1,34 @@
+export interface BackgroundInterface {
+  backgroundLoading: string;
+  backgroundMark: string;
+  backgroundPressed: string;
+  backgroundSurface: string;
+  backgroundAccentPrimary: string;
+  backgroundAccentSecondary: string;
+  backgroundActivePrimary: string;
+  backgroundActiveSecondary: string;
+  backgroundActiveTertiary: string;
+  backgroundDefaultPrimary: string;
+  backgroundDefaultSecondary: string;
+  backgroundDefaultTertiary: string;
+  backgroundDisabledInvert: string;
+  backgroundDisabledPrimary: string;
+  backgroundDisabledSecondary: string;
+  backgroundErrorPrimary: string;
+  backgroundErrorSecondary: string;
+  backgroundInvertPrimary: string;
+  backgroundInvertSecondary: string;
+  backgroundInvestDown: string;
+  backgroundInvestUp: string;
+  backgroundNeutralPrimary: string;
+  backgroundNeutralSecondary: string;
+  backgroundRiskHigh: string;
+  backgroundRiskLow: string;
+  backgroundRiskNormal: string;
+  backgroundRiskVeryHigh: string;
+  backgroundRiskVeryLow: string;
+  backgroundSuccessPrimary: string;
+  backgroundSuccessSecondary: string;
+  backgroundWarningPrimary: string;
+  backgroundWarningSecondary: string;
+}

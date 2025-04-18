@@ -1,6 +1,6 @@
 import { darkTheme, KDSFoundation, lightTheme } from '../entity/foundationEntity';
 
-const defaultTheme = {
+const ThemeList = {
   lightTheme: {
     ...lightTheme,
     ...KDSFoundation,
@@ -11,4 +11,4 @@ const defaultTheme = {
   },
 };
 
-export default defaultTheme;
+export default ThemeList;
