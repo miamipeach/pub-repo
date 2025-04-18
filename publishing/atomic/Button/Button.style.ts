@@ -4,7 +4,7 @@ import { ButtonStyleProps } from './interface';
 const ButtonStyle = styled.button<ButtonStyleProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   height: ${({ size }) => size};
-  color: ${({ colorSet }) => colorSet};
+  color: ${({ fontColor }) => fontColor};
   padding: ${({ spacing }) => `0 ${spacing}`};
   border-radius: ${({ radius }) => radius};
   &:active {

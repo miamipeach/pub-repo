@@ -1,8 +1,6 @@
-import defaultTheme from './default/defaultTheme';
-import { ThemeInterface } from './ThemeInterface';
+import defaultTheme from './defaultTheme';
+import { ThemeType } from './theme.type';
 
-const GlobalTheme: ThemeInterface = {
-  ...defaultTheme,
-};
+const GlobalTheme: ThemeType = defaultTheme.lightTheme;
 
 export default GlobalTheme;

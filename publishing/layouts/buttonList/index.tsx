@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultLayout from '../default';
-import { PrimaryButton } from '../../atomic/Button';
+import PrimaryButton from '../../atomic/Button/PrimaryButton';
 
 const ButtonListLayout = () => {
   return (
