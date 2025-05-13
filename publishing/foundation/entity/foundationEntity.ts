@@ -139,7 +139,7 @@ export interface IKDSColor {
   LV1200?: string;
 }
 
-export interface KDSColorEntity {
+interface IKDSColorEntity {
   black: IKDSColor;
   blue: IKDSColor;
   celery: IKDSColor;
@@ -159,7 +159,7 @@ export interface KDSColorEntity {
   yellow: IKDSColor;
 }
 
-export const KDSColorEntity: KDSColorEntity = {
+const KDSColorEntity: IKDSColorEntity = {
   // testGradient: '#c29d9d',
   // documentComplete: '#cfffd2',
   // documentComponent: '#9747ff',
@@ -418,7 +418,10 @@ export const KDSColorEntity: KDSColorEntity = {
     LV800: '#856600',
     LV900: '#755700',
   },
-};
+} as const;
+
+type TKDSColorKey = keyof IKDSColorEntity;
+type TKDSColorCode = keyof IKDSColorEntity[TKDSColorKey];
 
 export const lightTheme = {
   ...background,
@@ -488,9 +491,113 @@ export const lightTheme = {
   contentReadonlyInvert: KDSColorEntity.white.LV600,
 };
 
-export const darkTheme = {
+interface IDarkTheme {
+  // [key: string]: IKDSColorEntity[TKDSColorKey][TKDSColorCode];
+  depreciatedCg300: IKDSColorEntity[TKDSColorKey][TKDSColorCode];
+  depreciatedCg400: IKDSColorEntity[TKDSColorKey][TKDSColorCode];
+  depreciatedCg500: IKDSColorEntity;
+  depreciatedCg600: IKDSColorEntity;
+  backgroundLoading: IKDSColorEntity;
+  backgroundMark: IKDSColorEntity;
+  backgroundPressed: IKDSColorEntity;
+  backgroundSurface: IKDSColorEntity;
+  backgroundAccentPrimary: IKDSColorEntity;
+  backgroundAccentSecondary: IKDSColorEntity;
+  backgroundActivePrimary: IKDSColorEntity;
+  backgroundActiveSecondary: IKDSColorEntity;
+  backgroundActiveTertiary: IKDSColorEntity;
+  backgroundDefaultPrimary: IKDSColorEntity;
+  backgroundDefaultSecondary: IKDSColorEntity;
+  backgroundDefaultTertiary: IKDSColorEntity;
+  backgroundDisabledInvert: IKDSColorEntity;
+  backgroundDisabledPrimary: IKDSColorEntity;
+  backgroundDisabledSecondary: IKDSColorEntity;
+  backgroundErrorPrimary: IKDSColorEntity;
+  backgroundErrorSecondary: IKDSColorEntity;
+  backgroundInvertPrimary: IKDSColorEntity;
+  backgroundInvertSecondary: IKDSColorEntity;
+  backgroundInvestDown: IKDSColorEntity;
+  backgroundInvestUp: IKDSColorEntity;
+  backgroundNeutralPrimary: IKDSColorEntity;
+  backgroundNeutralSecondary: IKDSColorEntity;
+  backgroundRiskHigh: IKDSColorEntity;
+  backgroundRiskLow: IKDSColorEntity;
+  backgroundRiskNormal: IKDSColorEntity;
+  backgroundRiskVeryHigh: IKDSColorEntity;
+  backgroundRiskVeryLow: IKDSColorEntity;
+  backgroundSuccessPrimary: IKDSColorEntity;
+  backgroundSuccessSecondary: IKDSColorEntity;
+  backgroundWarningPrimary: IKDSColorEntity;
+  backgroundWarningSecondary: IKDSColorEntity;
+  borderDisabled: IKDSColorEntity;
+  borderError: IKDSColorEntity;
+  borderFocused: IKDSColorEntity;
+  borderHandle: IKDSColorEntity;
+  borderImage: IKDSColorEntity;
+  borderNeutral: IKDSColorEntity;
+  borderReadonly: IKDSColorEntity;
+  borderSuccess: IKDSColorEntity;
+  borderAccentPrimary: IKDSColorEntity;
+  borderAccentSecondary: IKDSColorEntity;
+  borderActivePrimary: IKDSColorEntity;
+  borderActiveSecondary: IKDSColorEntity;
+  borderActiveTertiary: IKDSColorEntity;
+  borderDefaultPrimary: IKDSColorEntity;
+  borderDefaultQuaternary: IKDSColorEntity;
+  borderDefaultQuinary: IKDSColorEntity;
+  borderDefaultSecondary: IKDSColorEntity;
+  borderDefaultTertiary: IKDSColorEntity;
+  borderDisabledInvert: IKDSColorEntity;
+  borderInvertPrimary: IKDSColorEntity;
+  borderInvertSecondary: IKDSColorEntity;
+  borderInvertTertiary: IKDSColorEntity;
+  borderInvestDown: IKDSColorEntity;
+  borderInvestUp: IKDSColorEntity;
+  commonBlur: IKDSColorEntity;
+  commonBrand: IKDSColorEntity;
+  commonDimmed: IKDSColorEntity;
+  commonSystemBlack: IKDSColorEntity;
+  commonSystemScreen: IKDSColorEntity;
+  contentCursor: IKDSColorEntity;
+  contentDisabled: IKDSColorEntity;
+  contentLike: IKDSColorEntity;
+  contentLink: IKDSColorEntity;
+  contentLoading: IKDSColorEntity;
+  contentMark: IKDSColorEntity;
+  contentNeutral: IKDSColorEntity;
+  contentPlaceholder: IKDSColorEntity;
+  contentReadonly: IKDSColorEntity;
+  contentSuccess: IKDSColorEntity;
+  contentWarning: IKDSColorEntity;
+  contentAccentPrimary: IKDSColorEntity;
+  contentAccentSecondary: IKDSColorEntity;
+  contentActivePrimary: IKDSColorEntity;
+  contentActiveQuaternary: IKDSColorEntity;
+  contentActiveSecondary: IKDSColorEntity;
+  contentActiveTertiary: IKDSColorEntity;
+  contentActivePrimaryInvert: IKDSColorEntity;
+  contentActiveSecondaryInvert: IKDSColorEntity;
+  contentCodeCode1: IKDSColorEntity;
+  contentCodeCode2: IKDSColorEntity;
+  contentCodeCode3: IKDSColorEntity;
+  contentDefaultPrimary: IKDSColorEntity;
+  contentDefaultQuaternary: IKDSColorEntity;
+  contentDefaultSecondary: IKDSColorEntity;
+  contentDefaultTertiary: IKDSColorEntity;
+  contentDefaultPrimaryInvert: IKDSColorEntity;
+  contentDefaultSecondaryInvert: IKDSColorEntity;
+  contentDisabledInvert: IKDSColorEntity;
+  contentErrorPrimary: IKDSColorEntity;
+  contentErrorSecondary: IKDSColorEntity;
+  contentInvestDown: IKDSColorEntity;
+  contentInvestUp: IKDSColorEntity;
+  contentLoadingInvert: IKDSColorEntity;
+  contentReadonlyInvert: IKDSColorEntity;
+}
+
+export const darkTheme: IDarkTheme = {
   depreciatedCg300: KDSColorEntity.gray.LV100,
-  depreciatedCg400: KDSColorEntity.gray.LV200,
+  depreciatedCg400: '#22222',
   depreciatedCg500: KDSColorEntity.gray.LV300,
   depreciatedCg600: KDSColorEntity.gray.LV500,
   backgroundLoading: KDSColorEntity.white.LV100,
@@ -499,94 +606,94 @@ export const darkTheme = {
   backgroundSurface: KDSColorEntity.gray.LV1100,
   backgroundAccentPrimary: KDSColorEntity.indigo.LV600,
   backgroundAccentSecondary: KDSColorEntity.indigo.LV100,
-  backgroundActivePrimary: KDSColorEntity.indigo.LV700,
-  backgroundActiveSecondary: KDSColorEntity.gray1000,
+  backgroundActivePrimary: '#fefefe',
+  backgroundActiveSecondary: KDSColorEntity.gray.LV1000,
   backgroundActiveTertiary: KDSColorEntity.indigo.LV500,
   backgroundDefaultPrimary: KDSColorEntity.white.LV50,
   backgroundDefaultSecondary: KDSColorEntity.white.LV100,
-  backgroundDefaultTertiary: KDSColorEntity.gray1100,
-  backgroundDisabledInvert: KDSColorEntity.white100,
-  backgroundDisabledPrimary: KDSColorEntity.gray1100,
-  backgroundDisabledSecondary: KDSColorEntity.gray1000,
-  backgroundErrorPrimary: KDSColorEntity.red600,
-  backgroundErrorSecondary: KDSColorEntity.red50,
-  backgroundInvertPrimary: KDSColorEntity.white100,
-  backgroundInvertSecondary: KDSColorEntity.white200,
-  backgroundInvestDown: KDSColorEntity.blue700,
-  backgroundInvestUp: KDSColorEntity.red600,
-  backgroundNeutralPrimary: KDSColorEntity.violet900,
-  backgroundNeutralSecondary: KDSColorEntity.violet50,
-  backgroundRiskHigh: KDSColorEntity.orange600,
-  backgroundRiskLow: KDSColorEntity.lime600,
-  backgroundRiskNormal: KDSColorEntity.yellow600,
-  backgroundRiskVeryHigh: KDSColorEntity.red600,
-  backgroundRiskVeryLow: KDSColorEntity.blue800,
-  backgroundSuccessPrimary: KDSColorEntity.celery600,
-  backgroundSuccessSecondary: KDSColorEntity.celery50,
-  backgroundWarningPrimary: KDSColorEntity.yellow200,
-  backgroundWarningSecondary: KDSColorEntity.yellow50,
-  borderDisabled: KDSColorEntity.gray1000,
-  borderError: KDSColorEntity.red600,
-  borderFocused: KDSColorEntity.indigo600,
-  borderHandle: KDSColorEntity.black50,
-  borderImage: KDSColorEntity.black50,
-  borderNeutral: KDSColorEntity.violet900,
-  borderReadonly: KDSColorEntity.gray600,
-  borderSuccess: KDSColorEntity.celery700,
-  borderAccentPrimary: KDSColorEntity.indigo700,
-  borderAccentSecondary: KDSColorEntity.indigo500,
-  borderActivePrimary: KDSColorEntity.indigo600,
-  borderActiveSecondary: KDSColorEntity.gray400,
-  borderActiveTertiary: KDSColorEntity.indigo800,
-  borderDefaultPrimary: KDSColorEntity.white800,
-  borderDefaultQuaternary: KDSColorEntity.white200,
-  borderDefaultQuinary: KDSColorEntity.white70,
-  borderDefaultSecondary: KDSColorEntity.white600,
-  borderDefaultTertiary: KDSColorEntity.white400,
-  borderDisabledInvert: KDSColorEntity.white200,
-  borderInvertPrimary: KDSColorEntity.white850,
-  borderInvertSecondary: KDSColorEntity.white500,
-  borderInvertTertiary: KDSColorEntity.white200,
-  borderInvestDown: KDSColorEntity.blue700,
-  borderInvestUp: KDSColorEntity.red600,
-  commonBlur: KDSColorEntity.white850,
-  commonBrand: KDSColorEntity.indigo1100,
-  commonDimmed: KDSColorEntity.black500,
-  commonSystemBlack: KDSColorEntity.white1000,
-  commonSystemScreen: KDSColorEntity.gray1200,
-  contentCursor: KDSColorEntity.indigo700,
-  contentDisabled: KDSColorEntity.gray1000,
-  contentLike: KDSColorEntity.magenta600,
-  contentLink: KDSColorEntity.blue600,
-  contentLoading: KDSColorEntity.white500,
-  contentMark: KDSColorEntity.red600,
-  contentNeutral: KDSColorEntity.violet900,
-  contentPlaceholder: KDSColorEntity.gray700,
-  contentReadonly: KDSColorEntity.gray600,
-  contentSuccess: KDSColorEntity.celery700,
-  contentWarning: KDSColorEntity.yellow200,
-  contentAccentPrimary: KDSColorEntity.indigo200,
-  contentAccentSecondary: KDSColorEntity.indigo500,
-  contentActivePrimary: KDSColorEntity.indigo600,
-  contentActiveQuaternary: KDSColorEntity.white800,
-  contentActiveSecondary: KDSColorEntity.white1000,
-  contentActiveTertiary: KDSColorEntity.indigo900,
-  contentActivePrimaryInvert: KDSColorEntity.white1000,
-  contentActiveSecondaryInvert: KDSColorEntity.white1000,
-  contentCodeCode1: KDSColorEntity.fuchsia1100,
-  contentCodeCode2: KDSColorEntity.celery700,
-  contentCodeCode3: KDSColorEntity.yellow700,
-  contentDefaultPrimary: KDSColorEntity.gray50,
-  contentDefaultQuaternary: KDSColorEntity.gray700,
-  contentDefaultSecondary: KDSColorEntity.gray300,
-  contentDefaultTertiary: KDSColorEntity.gray600,
-  contentDefaultPrimaryInvert: KDSColorEntity.white700,
-  contentDefaultSecondaryInvert: KDSColorEntity.white700,
-  contentDisabledInvert: KDSColorEntity.white200,
-  contentErrorPrimary: KDSColorEntity.red600,
-  contentErrorSecondary: KDSColorEntity.red600,
-  contentInvestDown: KDSColorEntity.blue700,
-  contentInvestUp: KDSColorEntity.red600,
-  contentLoadingInvert: KDSColorEntity.gray600,
-  contentReadonlyInvert: KDSColorEntity.white600,
+  backgroundDefaultTertiary: KDSColorEntity.gray.LV1100,
+  backgroundDisabledInvert: KDSColorEntity.white.LV100,
+  backgroundDisabledPrimary: KDSColorEntity.gray.LV1100,
+  backgroundDisabledSecondary: KDSColorEntity.gray.LV1000,
+  backgroundErrorPrimary: KDSColorEntity.red.LV600,
+  backgroundErrorSecondary: KDSColorEntity.red.LV50,
+  backgroundInvertPrimary: KDSColorEntity.white.LV100,
+  backgroundInvertSecondary: KDSColorEntity.white.LV200,
+  backgroundInvestDown: KDSColorEntity.blue.LV700,
+  backgroundInvestUp: KDSColorEntity.red.LV600,
+  backgroundNeutralPrimary: KDSColorEntity.violet.LV900,
+  backgroundNeutralSecondary: KDSColorEntity.violet.LV50,
+  backgroundRiskHigh: KDSColorEntity.orange.LV600,
+  backgroundRiskLow: KDSColorEntity.lime.LV600,
+  backgroundRiskNormal: KDSColorEntity.yellow.LV600,
+  backgroundRiskVeryHigh: KDSColorEntity.red.LV600,
+  backgroundRiskVeryLow: KDSColorEntity.blue.LV800,
+  backgroundSuccessPrimary: KDSColorEntity.celery.LV600,
+  backgroundSuccessSecondary: KDSColorEntity.celery.LV50,
+  backgroundWarningPrimary: KDSColorEntity.yellow.LV200,
+  backgroundWarningSecondary: KDSColorEntity.yellow.LV50,
+  borderDisabled: KDSColorEntity.gray.LV1000,
+  borderError: KDSColorEntity.red.LV600,
+  borderFocused: KDSColorEntity.indigo.LV600,
+  borderHandle: KDSColorEntity.black.LV50,
+  borderImage: KDSColorEntity.black.LV50,
+  borderNeutral: KDSColorEntity.violet.LV900,
+  borderReadonly: KDSColorEntity.gray.LV600,
+  borderSuccess: KDSColorEntity.celery.LV700,
+  borderAccentPrimary: KDSColorEntity.indigo.LV700,
+  borderAccentSecondary: KDSColorEntity.indigo.LV500,
+  borderActivePrimary: KDSColorEntity.indigo.LV600,
+  borderActiveSecondary: KDSColorEntity.gray.LV400,
+  borderActiveTertiary: KDSColorEntity.indigo.LV800,
+  borderDefaultPrimary: KDSColorEntity.white.LV800,
+  borderDefaultQuaternary: KDSColorEntity.white.LV200,
+  borderDefaultQuinary: KDSColorEntity.white.LV70,
+  borderDefaultSecondary: KDSColorEntity.white.LV600,
+  borderDefaultTertiary: KDSColorEntity.white.LV400,
+  borderDisabledInvert: KDSColorEntity.white.LV200,
+  borderInvertPrimary: KDSColorEntity.white.LV850,
+  borderInvertSecondary: KDSColorEntity.white.LV500,
+  borderInvertTertiary: KDSColorEntity.white.LV200,
+  borderInvestDown: KDSColorEntity.blue.LV700,
+  borderInvestUp: KDSColorEntity.red.LV600,
+  commonBlur: KDSColorEntity.white.LV850,
+  commonBrand: KDSColorEntity.indigo.LV1100,
+  commonDimmed: KDSColorEntity.black.LV500,
+  commonSystemBlack: KDSColorEntity.white.LV1000,
+  commonSystemScreen: KDSColorEntity.gray.LV1200,
+  contentCursor: KDSColorEntity.indigo.LV700,
+  contentDisabled: KDSColorEntity.gray.LV1000,
+  contentLike: KDSColorEntity.magenta.LV600,
+  contentLink: KDSColorEntity.blue.LV600,
+  contentLoading: KDSColorEntity.white.LV500,
+  contentMark: KDSColorEntity.red.LV600,
+  contentNeutral: KDSColorEntity.violet.LV900,
+  contentPlaceholder: KDSColorEntity.gray.LV700,
+  contentReadonly: KDSColorEntity.gray.LV600,
+  contentSuccess: KDSColorEntity.celery.LV700,
+  contentWarning: KDSColorEntity.yellow.LV200,
+  contentAccentPrimary: KDSColorEntity.indigo.LV200,
+  contentAccentSecondary: KDSColorEntity.indigo.LV500,
+  contentActivePrimary: KDSColorEntity.indigo.LV600,
+  contentActiveQuaternary: KDSColorEntity.white.LV800,
+  contentActiveSecondary: KDSColorEntity.white.LV1000,
+  contentActiveTertiary: KDSColorEntity.indigo.LV900,
+  contentActivePrimaryInvert: KDSColorEntity.white.LV1000,
+  contentActiveSecondaryInvert: KDSColorEntity.white.LV1000,
+  contentCodeCode1: KDSColorEntity.fuchsia.LV1100,
+  contentCodeCode2: KDSColorEntity.celery.LV700,
+  contentCodeCode3: KDSColorEntity.yellow.LV700,
+  contentDefaultPrimary: KDSColorEntity.gray.LV50,
+  contentDefaultQuaternary: KDSColorEntity.gray.LV700,
+  contentDefaultSecondary: KDSColorEntity.gray.LV300,
+  contentDefaultTertiary: KDSColorEntity.gray.LV600,
+  contentDefaultPrimaryInvert: KDSColorEntity.white.LV700,
+  contentDefaultSecondaryInvert: KDSColorEntity.white.LV700,
+  contentDisabledInvert: KDSColorEntity.white.LV200,
+  contentErrorPrimary: KDSColorEntity.red.LV600,
+  contentErrorSecondary: KDSColorEntity.red.LV600,
+  contentInvestDown: KDSColorEntity.blue.LV700,
+  contentInvestUp: KDSColorEntity.red.LV600,
+  contentLoadingInvert: KDSColorEntity.gray.LV600,
+  contentReadonlyInvert: KDSColorEntity.white.LV600,
 };
